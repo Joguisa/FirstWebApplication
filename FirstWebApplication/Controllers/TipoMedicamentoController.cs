@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using CapaEntidad;
+using CapaNegocio;
 
 namespace FirstWebApplication.Controllers
 {
@@ -8,7 +10,7 @@ namespace FirstWebApplication.Controllers
         {
             return View();
         }
-
+         
         public IActionResult Inicio()
         {
             return View();
@@ -17,6 +19,12 @@ namespace FirstWebApplication.Controllers
         public IActionResult SinMenu()
         {
             return View();
+        }
+
+        public List<TipoMedicamentoCLS> listarTipoMedicamento()
+        {
+            TipoMedicamentoBL obj = new TipoMedicamentoBL();
+            return obj.listarMedicamentos();
         }
 
     }
