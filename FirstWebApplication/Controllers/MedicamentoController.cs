@@ -8,7 +8,12 @@ namespace FirstWebApplication.Controllers
         {
             return View();
         }
-        
+
+        public IActionResult Saludos()
+        {
+            return View();
+        }
+
 
     }
 }
