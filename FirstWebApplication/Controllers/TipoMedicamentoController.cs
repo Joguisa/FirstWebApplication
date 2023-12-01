@@ -27,5 +27,14 @@ namespace FirstWebApplication.Controllers
             return obj.listarMedicamentos();
         }
 
+        // Ejemplo para leer lo que ponemos en el appsetting.json
+        public string cadena()
+        {
+            IConfigurationBuilder builder = new ConfigurationBuilder();
+            builder.AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json"));
+            var root = builder.Build();
+            var cadenaDato = root.GetConnectionString("db");
+            return cadenaDato;
+        }
     }
 }
