@@ -17,5 +17,11 @@ namespace FirstWebApplication.Controllers
             SucursalBL obj = new SucursalBL();
             return obj.listarSucursal();
         }
+
+        public List<SucursalCLS> filtrarSucursal(string nombresucursal)
+        {
+            SucursalBL obj = new SucursalBL();
+            return obj.filtrarSucursal(nombresucursal);
+        }
     }
 }

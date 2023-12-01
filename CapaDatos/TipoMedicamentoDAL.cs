@@ -13,15 +13,7 @@ namespace CapaDatos
         public List<TipoMedicamentoCLS> listarMedicamentos()
         {
             List<TipoMedicamentoCLS> lista = null;
-            /*
-             * Mandamos esra lógica a CadenaDal
-            // cadena(cadenaDato)
-            IConfigurationBuilder builder = new ConfigurationBuilder();
-            
-            builder.AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json"));
-            var root = builder.Build();
-            var cadenaDato = root.GetConnectionString("db");
-            */
+
             using (SqlConnection db = new SqlConnection(cadena))
             {
                 try

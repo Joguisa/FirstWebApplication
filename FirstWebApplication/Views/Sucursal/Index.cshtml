@@ -3,5 +3,17 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Listado Sucursal</h1>
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" id="txtnombrebusqueda"
+            placeholder="Ingrese nombre sucursal" >
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="Buscar()">Buscar</button>
+</div>
+<div id="divTabla">
+
+</div>
+
+<script src="~/lib/bootstrap/dist/js/generic.js"></script>
+<script src="~/lib/bootstrap/dist/js/sucursal.js"></script>
 
